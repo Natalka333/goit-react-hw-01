@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import './TransactionHistory.module.css';
+import css from './Profile.module.css';
 
 export default function TransactionHistory({ items }) {
     return (
-        <div >
-            <table>
+        <div className={css.profile}>
+            <table className={css.table}>
                 <thead>
                     <tr style={{ backgroundColor: createColor() }}>
                         <th>Type</th>
