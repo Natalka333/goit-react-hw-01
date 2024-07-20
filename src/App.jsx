@@ -1,7 +1,10 @@
-import Profile from './components/Profile/Profile'
-
+import Profile from './components/Profile'
+import FriendList from './components/FriendList'
+import TransactionHistory from './components/TransactionHistory'
 
 import user from './components/Data/user.json'
+import friends from './components/Data/friends.json'
+import transactions from './components/Data/transaction.json'
 import './App.css'
 
 function App() {
@@ -15,6 +18,9 @@ function App() {
         avatar={user.avatar}
         stats={user.stats} />
 
+      <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
     </>
   )
 }
