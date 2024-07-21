@@ -1,11 +1,12 @@
-import Profile from './components/Profile'
-import FriendList from './components/FriendList'
-import TransactionHistory from './components/TransactionHistory'
+import Profile from './components/Profile/Profile'
+import FriendList from './components/FriendList/FriendList'
+import TransactionHistory from './components/TransactionHistory/TransactionHistory'
 
-import user from './components/Data/user.json'
-import friends from './components/Data/friends.json'
-import transactions from './components/Data/transaction.json'
+import user from './components/data/user.json'
+import friends from './components/data/friends.json'
+import transactions from './components/data/transaction.json'
 import './App.css'
+
 
 function App() {
 

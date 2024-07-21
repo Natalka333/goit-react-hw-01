@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import './TransactionHistory.module.css';
-import css from './Profile.module.css';
+import css from './TransactionHistory.module.css';
 
-export default function TransactionHistory({ items }) {
+
+const TransactionHistory = ({ items }) =>{
     return (
-        <div className={css.profile}>
-            <table className={css.table}>
+        <div className={css.transactionHistory}>
+            <table>
                 <thead>
-                    <tr style={{ backgroundColor: createColor() }}>
+                    <tr>
                         <th>Type</th>
                         <th>Amount</th>
                         <th>Currency</th>
@@ -17,7 +17,7 @@ export default function TransactionHistory({ items }) {
                 <tbody>
                     {items.map(({ id, type, amount, currency }) => {
                         return (
-                            <tr key={id} style={{ backgroundColor: createColor() }}>
+                            <tr key={id}>
                                 <td>{type}</td>
                                 <td>{amount}</td>
                                 <td>{currency}</td>
@@ -30,20 +30,7 @@ export default function TransactionHistory({ items }) {
     );
 }
 
-const createColor = () => {
-    const color =
-        'rgba(' +
-        Math.round(Math.random() * 255) +
-        ',' +
-        Math.round(Math.random() * 255) +
-        ',' +
-        Math.round(Math.random() * 255) +
-        ',' +
-        0.2 +
-        ')';
-    // console.log(color);
-    return color;
-};
+
 
 TransactionHistory.propTypes = {
     items: PropTypes.arrayOf(
@@ -55,3 +42,5 @@ TransactionHistory.propTypes = {
         })
     ).isRequired,
 };
+
+export default TransactionHistory

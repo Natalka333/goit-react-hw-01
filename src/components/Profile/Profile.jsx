@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
+import { FaUserAlt, FaTags, FaMapMarkerAlt } from 'react-icons/fa';
 import css from './Profile.module.css';
 
-export default function Profile({ avatar, username, tag, location, stats }) {
+const Profile = ({ avatar, username, tag, location, stats }) => {
     return (
         <div className={css.profile}>
             <div className={css.description}>
                 <img src={avatar} alt={username} className={css.avatar} />
-                <p className={css.name}>{username}</p>
-                <p className={css.tag}>{tag}</p>
-                <p className={css.location}>{location}</p>
+                <p className={css.name}><FaUserAlt size={14} /> {username}</p>
+                <p className={css.tag}><FaTags size={16} /> {tag}</p>
+                <p className={css.location}><FaMapMarkerAlt size={16} /> {location}</p>
             </div>
 
             <ul className={css.stats}>
@@ -40,3 +41,6 @@ Profile.propTypes = {
         likes: PropTypes.number.isRequired,
     }),
 };
+
+
+export default Profile
